@@ -1,0 +1,94 @@
+.main {
+  background-color: #fcd116 ;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: calc(100vw - 40%);
+  height: calc(100vh - 20%);
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  display: flex;
+}
+
+.containerimg{
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.containerimg img{
+  height: 100%;
+  width: 100%;
+}
+
+.containerform{
+  background-color: white;
+  width: 40%;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerform h4{
+  font-size: 3rem;
+  font-weight: bold;
+  color: #003893;
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+.containerform form {
+  width: 100%;
+}
+
+.containerform form div input{
+  border: none;
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.containerform form div button{
+  border: none;
+  background-color:#003893 ;
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  transition: all .5 ease;
+}
+
+.containerform form div button:hover{
+  background-color:#0038934f;
+}
+
+.containerform a{
+  margin-top: 10px;
+}
+
+
+@media(max-width: 850px) {
+  .card {
+    flex-direction: column;
+  }
+  .containerimg{
+    display: none;
+  }
+
+  .containerform{
+    width: 90%;
+    height: 90%;
+  }
+}
