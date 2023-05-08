@@ -23,11 +23,11 @@ export default function Register() {
     seting()
     setLoading(false)
    
-  }, []);
+  }, [loadUser]);
 
   useEffect(() => {
     token !== null && router.push("/");
-  }, []);
+  }, [token]);
 
   const { 
     email,
