@@ -2,7 +2,7 @@ import { useState, useContext } from 'react'
 
 import {IForm} from '../interfaces/form';
 import LoginContext from '../context/loginContext/loginContext';
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
 
 const useForm = ( signIn?: boolean) => {
     const loginContext = useContext(LoginContext);

@@ -1,24 +1,35 @@
 "use client";
 
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import LoginContext from "../../context/loginContext/loginContext";
 import { useRouter } from "next/navigation";
-import CardForm from "../../components/cardForm/cardForm"
+import CardForm from "../components/cardForm/cardForm"
 import useForm from '../../hocks/useForm';
+import Spinner from "../components/spinner/spinner";
 
 export default function Register() {
   const loginContext = useContext(LoginContext);
-  const { token, addToken } = loginContext;
+  const { token, loadUser } = loginContext;
   const router = useRouter();
-  const tk = localStorage.getItem('token')
+
+  const [loading, setLoading] = useState(true)
+
+
+  useEffect(() => {
+    const seting =async() => {
+      await loadUser()
+    }
+
+    seting()
+    setLoading(false)
+   
+  }, []);
 
   useEffect(() => {
     token !== null && router.push("/");
   }, [token]);
 
-  useEffect(() => {
-    if(tk !== null) addToken(tk)
-  }, []);
+
 
   const { 
     email,
@@ -27,8 +38,12 @@ export default function Register() {
     handleSubmit,
   } = useForm(true)
 
+  if(loading) {
+    return <Spinner />
+  }
 
-  return token !== null || tk !== null  ? (
+
+  return token !== null ? (
     null
   ) : (
       <CardForm title="REGISTRATE" url="login">

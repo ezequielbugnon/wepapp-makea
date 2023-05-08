@@ -1,0 +1,33 @@
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.title div{
+    width: 80%;
+    font-size: 28px;
+    font-weight: bold;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    color: #003893;
+}
+
+.title div h1 {
+    padding-right: 20px;
+}
+
+.title div button {
+    border: none;
+    background-color: #003893;
+    color: white;
+    padding: 10px;
+    transition: .5s all ease;
+    cursor: pointer;
+}
+
+.title div button:hover{
+    background-color: #0038933f;
+}
+
