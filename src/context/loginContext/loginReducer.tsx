@@ -1,8 +1,10 @@
 'use client';
 
 type Action = 
-    | { type: 'AUTHENTICATED', payload: string }
+    | { type: 'AUTHENTICATED', payload: any }
     | { type: 'ERROR', payload: string}
+    | { type: 'ORDERS', payload: any}
+    | { type: 'LOADING', payload: any}
 
 
 const UserReduder = (state: any, action: Action) => {
@@ -16,7 +18,16 @@ const UserReduder = (state: any, action: Action) => {
             return{
                 ...state,
                 token: null,
-                message: action.payload
+            }
+        case 'ORDERS':
+            return{
+                ...state,
+                orders: action.payload
+            }
+        case 'LOADING':
+            return{
+                ...state,
+                loading: action.payload
             }
         default:
             return state;

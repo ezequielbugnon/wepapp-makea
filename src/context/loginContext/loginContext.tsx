@@ -2,12 +2,17 @@
 
 import { createContext } from 'react';
 import {IForm} from '../../interfaces/form'
+import { ICatalogue } from '@/interfaces/catalogue';
 
 export interface LoginContextProps {
-    token: string,
+    token: any,
+    orders: any,
+    loading: any,
     login: (data: IForm) => void,
-    addToken: (data : string) => void,
     register: (data: IForm) => void;
+    sendOrder : (sendData :ICatalogue[]) => void;
+    loadUser: () => void;
+    getOrders : () => void;
     logout: () => void;
 }
 

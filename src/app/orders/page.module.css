@@ -1,0 +1,22 @@
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.title div{
+    width: 80%;
+    font-size: 28px;
+    font-weight: bold;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    color: #003893;
+    padding-top: 40px;
+}
+
+.title div p{
+    padding-top: 10px;
+    color: black;
+    font-size: 14px;
+}
