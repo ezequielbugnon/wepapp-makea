@@ -35,6 +35,7 @@ export default function Home() {
     Getfilter(data!, event.target.value)
   };
 
+
   if(loading) {
     return  <Spinner/>
   }

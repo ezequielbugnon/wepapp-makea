@@ -22,7 +22,7 @@ const CatalogueState = (props: Props) => {
 
   const getCatalogue = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/catalogue`);
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_URL}/catalogue`);
       dispatch({
         type: "CHARGE",
         payload: response.data,
