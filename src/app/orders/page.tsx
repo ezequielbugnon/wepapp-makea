@@ -17,17 +17,17 @@ export default function Orders() {
 
     useEffect(() => {
         loadUser()
-    }, []);
+    });
 
   
     useEffect(() => {
         token === null && router.push("/");
-    }, []);
+    });
     
 
     useEffect(() => {
         getOrders()
-    }, []);
+    });
 
     if (loading) {
         return <Spinner />;

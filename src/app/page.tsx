@@ -18,8 +18,7 @@ export default function Home() {
   useEffect(() => {
     getCatalogue()
     setLoading(false)
-   
-  }, []);
+  });
 
 
   const options = [

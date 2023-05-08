@@ -23,7 +23,7 @@ const Cart = () => {
 
     seting();
     setLoading(false);
-  }, []);
+  });
 
   useEffect(() => {
     const storeCart = JSON.parse(localStorage.getItem("cart") || "{}");
@@ -60,7 +60,7 @@ const Cart = () => {
       setCart([])
     }
     setLoading(false);
-  }, []);
+  });
 
   const handlerOrder = () => {
     sendOrder(cart)

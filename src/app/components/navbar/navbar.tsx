@@ -26,7 +26,7 @@ export default function Navbar() {
     seting()
     setLoading(false)
    
-  }, []);
+  });
 
 
   const handlerLogut = () => {

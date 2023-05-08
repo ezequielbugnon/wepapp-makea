@@ -23,11 +23,11 @@ export default function Login() {
     seting()
     setLoading(false)
    
-  }, []);
+  });
 
   useEffect(() => {
     token !== null && router.push("/");
-  }, [token]);
+  });
 
   const { 
     email,
