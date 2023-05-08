@@ -23,7 +23,7 @@ export default function Login() {
     seting()
     setLoading(false)
    
-  }, [loadUser]);
+  }, []);
 
   useEffect(() => {
     token !== null && router.push("/");
