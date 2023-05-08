@@ -29,8 +29,6 @@ export default function Register() {
     token !== null && router.push("/");
   });
 
-
-
   const { 
     email,
     name,

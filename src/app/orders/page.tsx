@@ -40,7 +40,7 @@ export default function Orders() {
             <div className={styles.title}>
                 <div>
                     <h1>Orders Totales</h1>
-                    {orders&& orders.map((e: any) => <p>{e.id}</p>)}
+                    {orders&& orders.map((e: any) => <p key={e.id}>{e.id}</p>)}
                     {!orders && <p>No hay pedidos</p>}
                 </div>
             </div>
